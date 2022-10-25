@@ -21,3 +21,5 @@ $sql->execute();
 $data =[];
 
 $data = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+?>
