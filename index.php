@@ -6,25 +6,27 @@ require 'header.php';
 ?>
 
 
-<div class="container bg-dark text-white" style="min-height: 85vh;">
+<div class="container bg-dark text-white" style="min-height: 100vh;">
     <div class="row">
 
 
         <div class="row">
             <?php foreach ($data as $item) : ?>
-
+                </a>
                 <div class="col-3">
-                <div class="col" style="margin-top: 50px; display:flex; justify-content: center;">
-                   <img width="200px" src="<?=$base;?>/imagens/<?=$item['equipamento'];?>.jpg" alt="">
-                </div>
+                    <div class="col" style="margin-top: 50px; display:flex; justify-content: center;">
+                    <a href="<?=$base;?>/manuais/<?=$item['equipamento'];?>.pdf">
+                        <img width="200px" height="150px" class="img-thumbnail" style="height: 150px; width: 200px;" src="<?= $base; ?>/imagens/<?= $item['equipamento']; ?>.jpg" alt="">
+                    </a>
+                    </div>
 
-                <div class="col" style="text-align: center;">
-                    <?= $item['equipamento']; ?>
-                </div>
+                    <div class="col" style="text-align: center;">
+                        <?= $item['equipamento']; ?>
+                    </div>
 
-                <div class="col" style="text-align: center;">
-                    <?= $item['modelo']; ?>
-                </div>
+                    <div class="col" style="text-align: center;">
+                        <?= $item['modelo']; ?>
+                    </div>
                 </div>
 
 
@@ -35,5 +37,14 @@ require 'header.php';
 </div>
 
 
+
 <?php
 require 'footer.php';
+
+if(isset($_GET['msg'])){
+    echo $_GET['msg'];
+  }
+
+?>
+
+

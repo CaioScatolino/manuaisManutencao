@@ -14,6 +14,7 @@ $equipamento = '';
 $modelo = '';
 // $id = '';
 
+
 $sql = $pdo->query("SELECT * FROM equip ORDER BY modelo ASC");
 
 $sql->execute();
@@ -21,5 +22,3 @@ $sql->execute();
 $data =[];
 
 $data = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-?>
