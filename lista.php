@@ -28,8 +28,7 @@ require 'config.php';
             <td><?=$item['modelo'];?></td>
             <td>
                 <a href="<?=$base;?>/editar.php?id=<?=$item['id'];?>" class="btn-sm btn-primary">Editar</a>
-                <a href="<?=$base;?>/deletar.php?id=<?=$item['id'];?>" class="btn-sm btn-danger">Deletar</a>
-                
+                <a href="<?=$base;?>/deletar.php?id=<?=$item['id'];?>" class="btn-sm btn-danger" onclick="return confirm('Realmente deseja deletar este item?')">Deletar</a>
             </td>
         </tr>
 

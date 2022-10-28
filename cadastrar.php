@@ -21,8 +21,17 @@ require 'header.php';
         <?php
         endif;
         ?>
+                <?php
+        if (isset($_GET['msg']) && $_GET['msg'] == 'falha'):
+        ?>
+        <div class="alert alert-danger" role="alert" id="sucesso">
+            <?php echo 'Este equipamento não é cadastrado, favor cadastrar nesta tela';?>
+        </div>
+        <?php
+        endif;
+        ?>
         
-    <form id="form" action="cadastrar_action.php" method="get">
+    <form id="form" action="cadastrar_action.php" method="post">
         <div class="row text-light">
             <div class="col">
                 <div class="form-group">
@@ -33,6 +42,7 @@ require 'header.php';
             <div class="col">
                 <label for="formGroupExampleInput">Selecione o Tipo de Equipamento</label>
                 <select class="form-control" name="modelo">
+                    <option selected hidden disabled>Selecione um Modelo</option>
                     <option>Aplicador de Selo</option>
                     <option>Aquecedor de Correias</option>
                     <option>Corte Cabo de Bateria</option>

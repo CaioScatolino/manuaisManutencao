@@ -2,8 +2,8 @@
 
 require 'config.php';
 
-$equipamento = filter_input(INPUT_GET, 'equipamento');
-$modelo = filter_input(INPUT_GET, 'modelo');
+$equipamento = filter_input(INPUT_POST, 'equipamento');
+$modelo = filter_input(INPUT_POST, 'modelo');
 
 
 if ($equipamento && $modelo) {

@@ -16,7 +16,7 @@ require 'header.php';
                 <div class="col-3">
                     <div class="col" style="margin-top: 50px; display:flex; justify-content: center;">
                     <a href="<?=$base;?>/manuais/<?=$item['equipamento'];?>.pdf">
-                        <img width="200px" height="150px" class="img-thumbnail" style="height: 150px; width: 200px;" src="<?= $base; ?>/imagens/<?= $item['equipamento']; ?>.jpg" alt="">
+                        <img height="150px" width="500px" class="img-thumbnail" style="height: 200px; width: 500px;" src="<?= $base; ?>/imagens/<?= $item['equipamento']; ?>.jpg" alt="">
                     </a>
                     </div>
 
